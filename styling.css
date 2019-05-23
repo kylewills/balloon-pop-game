@@ -1,0 +1,386 @@
+/*styling.css*/
+html{
+    height: 100%;
+    background-image: url(images/watercolourBalloons.jpg);
+    /*background: radial-gradient(circle, #fff, #ccc);
+    background: -webkit-radial-gradient(circle, #fff, #ccc);   
+    background: -o-radial-gradient(circle, #fff, #ccc);   
+    background: -moz-radial-gradient(circle, #fff, #ccc);*/
+}
+
+body{
+    font-family: ariel, sans-serif;
+    background-image: url(images/watercolourBalloons.jpg);
+}
+
+#container{
+    height: 600px;
+    width: 750px;
+    background-color: #6d6de3;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 15px;
+    border: solid 5px #fff;
+    /*box-shadow: 0px 4px 0px 0px #009de4;
+    -moz-box-shadow: 0px 4px 0px 0px #009de4;
+    -webkit-box-shadow: 0px 4px 0px 0px #009de4;
+/*        box-shadow: [horizontal offset] [vertical offset] [blur radius] [optional spread radius] [color]*/
+    position: relative;
+}
+
+#score{
+    background-color: #f0e928;
+    color: #000;
+    border-radius: 3px;
+    border: solid 2px #000;
+    padding: 11px;
+    position: absolute;
+    left: 690px;
+    /*box-shadow: 0px 4px 0px #9da853;
+    -moz-box-shadow: 0px 4px 0px #9da853;
+    -webkit-box-shadow: 0px 4px 0px #9da853;*/
+}
+
+#correct{
+    position: absolute;
+    left: 260px;
+    background-color: #42e252;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+
+#wrong{
+    position: absolute;
+    left: 250px;
+    background-color: #de401a;
+    color: white;
+    padding: 11px;
+    display: none;
+}
+
+#balloonsContainer{
+    width: 650px;
+    height: 400px;
+    margin: 50px auto 10px auto;
+    /*background-color: white;*/
+    background-image: url(images/Green-Hills-And-Blue-Sky-Landscape-800px.png);
+    border: solid 3px #000;
+    border-radius: 10px;
+    /*box-shadow: 0px 4px #535aa8;
+    -moz-box-shadow: 0px 4px #535aa8;
+    -webkit-box-shadow: 0px 4px #535aa8;*/
+    font-size: 100px;
+    text-align: center;
+    font-family: cursive, sans-serif;
+    color: black;
+    position: relative;
+    overflow: hidden;
+    cursor: crosshair;
+}
+
+#howToPop{
+    position: absolute;
+    left: 220px;
+    width: 200px;
+    height: 150px;
+    font-size: 26px;
+}
+
+#instruction{
+    width: 450px;
+    height: 50px;
+    background-color: #6fc7fa;
+    margin: 17px auto;
+    text-align: center;
+    line-height: 45px;
+    font-weight: bold;
+    font-size: 20px;
+    border: solid 3px #000;
+    border-radius: 10px;
+    /*box-shadow: 0px 4px #8153a8;
+    -moz-box-shadow: 0px 4px #8153a8;
+    -webkit-box-shadow: 0px 4px #8153a8;*/
+}
+
+#choices{
+    width: 450px;
+    height: 100px;
+    margin: 5px auto;
+}
+
+.box{
+    width: 85px;
+    height: 85px;
+    background-color: white;
+    float: left;
+    margin-right: 36px;
+    border-radius: 3px;
+    cursor: pointer;
+    box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    line-height: 80px;
+    position: relative;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;
+}
+
+.box:hover, #startreset:hover{
+/*    background-color: #9C89F6;*/
+/*    color: white;*/
+/*    box-shadow: 0px 4px #6b54d3;*/
+/*    -moz-box-shadow: 0px 4px #6b54d3;*/
+/*    -webkit-box-shadow: 0px 4px #6b54d3;*/
+}
+
+.box:active, #startreset:active{
+    background-color: #9C89F6;
+    color: white;
+    box-shadow: 0px 0px #6b54d3; 
+    -moz-box-shadow: 0px 0px #6b54d3; 
+    -webkit-box-shadow: 0px 0px #6b54d3; 
+    top: 4px;
+}
+#box4{
+    margin-right: 0;   
+}
+
+#startreset{
+    width: 110px;
+    padding: 10px;
+    background-color: rgba( 246, 105, 107, 0.767 );
+    /*background-color: rgba(255,255,255,0.5);*/
+    margin: 0 auto;
+    border-radius: 10px;
+    border: solid 3px #000;
+    cursor: pointer;
+    font-weight: bold;
+    /*box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);*/
+    text-align: center;
+    position: relative;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;   
+}
+
+#trialsLeft{
+    width: 80px;
+    padding: 10px;
+    position: absolute;
+    background-color: rgba( 35, 245, 24, 0.767 );
+    border-radius: 3px;
+    color: #fff;
+    border: solid 1px #000;
+    /*box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+    -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);*/
+/*    visibility: hidden;*/
+    display: none;
+}
+
+#gameOver{
+    height: 200px;
+    width: 500px;
+    background: linear-gradient(#F3CA6B, #F3706C);
+    background: -webkit-linear-gradient(#F3CA6B, #F3706C);
+    background: -o-linear-gradient(#F3CA6B, #F3706C);
+    background: -moz-linear-gradient(#F3CA6B, #F3706C);
+    color: white;
+    border: solid 5px #000;
+    border-radius: 10px;
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    position: absolute;
+    top: 170px;
+    left: 145px;
+    z-index: 2;
+    display: none;
+    
+}
+
+.life{
+    width: 16px;
+    height: 16px;
+    margin: 0 5px;
+}
+
+.balloon{
+    display: none;
+    position: absolute;
+}
+
+
+
+@media only screen and (min-width: 320px)and (max-width: 780px) {
+    
+    #container{
+    height: 400px;
+    width: 320px;
+    margin: 30px auto;
+    padding: 10px;
+    }
+    
+    #balloonsContainer{
+    width: 310px;
+    height: 360px;
+    margin: 30px auto 10px auto;
+    /*background-color: white;*/
+    background-image: url(images/Green-Hills-And-Blue-Sky-Landscape-800px.png);
+    background-size: 310px 360px;
+    position: relative;
+    }
+    
+    #howToPop{
+    position: absolute;
+    left: 65px;
+    width: 200px;
+    height: 150px;
+    font-size: 22px;
+    }
+    
+    #instruction{
+    width: 310px;
+    height: 40px;
+    margin: 30px auto;
+    line-height: 40px;
+    font-size: 18px;
+    }
+    
+    #startreset{
+    width: 100px;
+    padding: 8px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;   
+    }
+    
+    #score{
+    border-radius: 6px;
+    padding: 6px;
+    left: 250px;
+    top: 3px;
+    }
+    
+    #trialsLeft{
+    width: 80px;
+    padding: 6px;
+    top: 3px;
+    border-radius: 6px;
+    color: #fff;
+    }
+    
+    #gameOver{
+    height: 120px;
+    width: 240px;
+    font-size: 1.2em;
+    top: 130px;
+    left: 50px;
+    }
+    
+    .balloon{
+    width: 75px;
+    height: 120px;
+    position: absolute;
+    }
+    
+    
+
+
+    
+}
+
+@media only screen and (min-width: 100px)and (max-width: 340px) {
+    
+  #container{
+    height: 320px;
+    width: 200px;
+    margin: 20px auto;
+    padding: 2px;
+    border-radius: 15px;
+    }
+    
+    #balloonsContainer{
+    width: 180px;
+    height: 255px;
+    margin: 50px auto 5px auto;
+    /*background-color: white;*/
+    background-image: url(images/Green-Hills-And-Blue-Sky-Landscape-800px.png);
+    background-size: 180px 260px;
+    position: relative;
+    }
+    
+    #howToPop{
+    position: absolute;
+    left: 2px;
+    width: 180px;
+    height: 150px;
+    font-size: 16px;
+    }
+    
+    #instruction{
+    width: 180px;
+    height: 25px;
+    margin: 25px auto 0px auto;
+    line-height: 27px;
+    font-size: 14px;
+    }
+    
+    #startreset{
+    width: 80px;
+    padding: 8px;
+    font-size: 14px;
+    margin: 10px auto;
+    cursor: pointer;
+    height: 14px;
+    transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -ms-transition: all 0.2s;   
+    }
+    
+    #score{
+    border-radius: 6px;
+    padding: 2px;
+    left: 130px;
+    top: 3px;
+    }
+    
+    #trialsLeft{
+    width: 80px;
+    padding: 2px;
+    top: 3px;
+    border-radius: 6px;
+    }
+    
+    #gameOver{
+    height: 80px;
+    width: 140px;
+    font-size: 0.9em;
+    top: 80px;
+    left: 30px;
+    }
+    
+    .balloon{
+    width: 45px;
+    height: 90px;
+    position: absolute;
+    }
+    
+
+
+}
